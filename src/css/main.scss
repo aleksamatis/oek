@@ -1,0 +1,272 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  font-family: 'Inter';
+  font-style: normal;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.container {
+  max-width: 1276px;
+  margin: 0 auto;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 9px;
+  padding-bottom: 8px;
+
+  & > .container {
+    background: #F0F0F0;
+  }
+}
+
+.header-menu-items {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+
+  > div {
+    cursor: pointer;
+  }
+}
+
+.header-menu-control {
+  display: flex;
+  gap: 22px;
+
+  > * {
+    cursor: pointer;
+  }
+}
+
+.header-menu-container {
+  background: #F0F0F0;
+}
+
+.menu-item {
+  white-space: nowrap;
+}
+
+.header-contacts {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 32px;
+  margin-right: 16px;
+
+  img {
+    margin: 2px 8px 0 0;
+  }
+
+  .contacts-phone-number {
+    font-size: 17px;
+    line-height: 21px;
+    font-weight: 500;
+  }
+
+  .contacts-free-call {
+    font-size: 11px;
+    line-height: 13px;
+    color: #85949C;
+  }
+}
+
+.header-main-banner {
+  background: url('/images/banner-rectangles.svg'), linear-gradient(90deg, #661032 0%, #661032 40%, rgba(217, 217, 217, 0) 100%), no-repeat top right url("/images/mash21.png"), #661032;
+  background-size: auto, auto, contain;
+  padding: 137px 29px;
+  position: relative;
+}
+
+.header-main-banner-dots {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  gap: 12px;
+  padding: 24px;
+
+  > div {
+    border: 1px solid white;
+    border-radius: 100%;
+    width: 14px;
+    height: 14px;
+
+    &:first-child {
+      border-width: 2px;
+    }
+  }
+}
+
+.header-main-text {
+  max-width: 581px;
+}
+
+.header-main-banner-title {
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 60px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.header-main-banner-subtitle {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+  color: #ffffff;
+  margin-bottom: 52px;
+}
+
+.header-main-btn {
+  width: 194px;
+  height: 42px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 42px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background-color: #661032;
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.main-advantages {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 47px;
+}
+
+.main-advantages-age {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+}
+
+.main-advantages-age-text {
+  color:#5E6D76;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.main-advantages-text-item {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 25px;
+  max-width: 320px;
+}
+
+.header-burger-menu {
+  display: none;
+}
+
+@media screen and (max-width: 1276px) {
+  .container {
+    padding: 0 22px;
+  }
+
+  .header-menu-items {
+    display: none;
+  }
+
+  .header-burger-menu {
+    display: block;
+  }
+
+  .main-advantages {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 21px;
+
+    .main-advantages-text-item {
+      width: 100%;
+      max-width: 100%;
+      justify-content: space-between;
+      font-size: 15px;
+
+      img {
+        width: 25px;
+        height: 30px;
+      }
+    }
+  }
+
+  .header-main-banner-title {
+    font-size: 35px;
+    line-height: 42px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-menu-logo {
+    width: 125px;
+    height: auto;
+  }
+
+  .header-menu-control {
+    display: none;
+  }
+
+  .header-contacts {
+    .contacts-phone-number {
+      font-size: 15px;
+    }
+
+    .contacts-free-call {
+      font-size: 9px;
+    }
+  }
+
+  .header-main-banner-title {
+    font-size: 29px;
+    line-height: 35px;
+  }
+
+  .header-main-banner {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .main-advantages {
+    padding-bottom: 22px;
+  }
+
+  .header-main-banner-dots {
+    left: 50%;
+    right: unset;
+    transform: translateX(-50%);
+    padding: 16px;
+  }
+}
