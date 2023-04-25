@@ -10,6 +10,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+  <script>
+    function onBurgerMenuClick() {
+      $("#mobile-menu").show()
+    }
+    function onCloseMenu() {
+      $("#mobile-menu").hide()
+    }
+  </script>
 </head>
 
 <body>
@@ -50,12 +60,12 @@
               RU <img src="/images/down.svg" alt="" />
             </div>
           </div>
-          <div class="header-burger-menu">
-            <img src="/images/burger-menu.svg" />
+          <div class="header-burger-menu" onclick="onBurgerMenuClick()">
+              <img src="/images/burger-menu.svg" />
           </div>
-          <div class="header-submenu-mobile">
+          <div class="header-submenu-mobile" id="mobile-menu">
             <div class="submenu-items-mobile">
-              <div class="submenu-items-mobile-close"><img src="/images/close.svg" alt="" /></div>
+              <div class="submenu-items-mobile-close" onclick="onCloseMenu()"><img src="/images/close.svg" alt="" /></div>
               <div>О компании <img src="/images/down.svg" alt="" /></div>
               <hr class="hr-menu-mobile"/>
               <div class="header-submenu-item-mobile">Филиалы</div>

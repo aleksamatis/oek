@@ -211,6 +211,7 @@ select {
 
 .header-burger-menu {
   display: none;
+  cursor: pointer;
 }
 
 .hr-menu-mobile {
@@ -220,6 +221,7 @@ select {
 .submenu-items-mobile-close {
   display: flex;
   justify-content: flex-end;
+  cursor: pointer;
 }
 
 .header-submenu-mobile {
@@ -230,6 +232,7 @@ select {
   top: 0;
   z-index: 100;
   bottom: 0;
+  display: none;
 }
 
 .submenu-items-mobile {
