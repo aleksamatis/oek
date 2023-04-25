@@ -30,7 +30,7 @@ select {
 }
 
 .container {
-  max-width: 1276px;
+  max-width: 1278px;
   margin: 0 auto;
 }
 
@@ -40,10 +40,15 @@ select {
   align-items: center;
   padding-top: 9px;
   padding-bottom: 8px;
+  font-size: 15px;
 
   & > .container {
     background: #F0F0F0;
   }
+}
+
+.header-menu-logo {
+  margin-right: 38px;
 }
 
 .header-menu-items {
@@ -73,6 +78,10 @@ select {
   white-space: nowrap;
 }
 
+.menu-down-img {
+  margin-left: 8px;
+}
+
 .header-contacts {
   display: flex;
   align-items: flex-start;
@@ -97,19 +106,27 @@ select {
 }
 
 .header-main-banner {
-  background: url('/images/banner-rectangles.svg'), linear-gradient(90deg, #661032 0%, #661032 40%, rgba(217, 217, 217, 0) 100%), no-repeat top right url("/images/mash21.png"), #661032;
-  background-size: auto, auto, contain;
+  background: 
+    url('/images/banner-rectangles.svg'),
+     linear-gradient(90deg, #661032 0%, #661032 40%, rgba(217, 217, 217, 0) 60%),
+      no-repeat right url("/images/mash21.png"), 
+    #661032;
+  background-size: auto, auto, cover;
   padding: 137px 29px;
   position: relative;
 }
 
 .header-main-banner-dots {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 24px;
+  left: 50%;
   display: flex;
+  justify-content: flex-end;
   gap: 12px;
-  padding: 24px;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1278px;
+
 
   > div {
     border: 1px solid white;
@@ -159,6 +176,7 @@ select {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 27px;
   padding-bottom: 47px;
 }
 
@@ -167,6 +185,7 @@ select {
   flex-direction: column;
   align-content: center;
   text-align: center;
+  margin-right: 93px;
 }
 
 .main-advantages-age-text {
@@ -176,13 +195,18 @@ select {
   line-height: 30px;
 }
 
+.main-advantages-text-items {
+  display: flex;
+  justify-content: space-between;
+  gap: 76px;
+}
+
 .main-advantages-text-item {
   display: flex;
   align-items: center;
   font-weight: 700;
   font-size: 21px;
   line-height: 25px;
-  max-width: 320px;
 }
 
 .header-burger-menu {
@@ -288,6 +312,15 @@ select {
     flex-wrap: wrap;
     justify-content: center;
     gap: 21px;
+    
+    .main-advantages-age {
+      margin: 0;
+    }
+
+    .main-advantages-text-items {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
     .main-advantages-text-item {
       width: 100%;
@@ -343,9 +376,7 @@ select {
   }
 
   .header-main-banner-dots {
-    left: 50%;
-    right: unset;
-    transform: translateX(-50%);
     padding: 16px;
+    justify-content: center;
   }
 }
