@@ -235,10 +235,16 @@ select {
   display: none;
 }
 
+.submenu-mobile-section {
+  color: #661032;
+  cursor: pointer;
+}
+
 .submenu-items-mobile {
   background: linear-gradient(180deg, rgba(201, 201, 201, 0) 0%, rgba(231, 231, 231, 0.8) 100%);
-  padding-top: 60px;
+  padding-top: 30px;
   padding-left: 77px;
+  padding-right: 36px;
 }
 
 .submenu-main-items-mobile {
@@ -247,10 +253,12 @@ select {
 
 .header-submenu-item-mobile {
   padding-bottom: 17px;
+  cursor: pointer;
+  font-weight: 500;
 }
 
 .header-submenu-item-mobile:first-of-type {
-  padding-top: 16px;
+  margin-top: 16px;
 }
 
 .header-menu-item-submenu {
@@ -273,10 +281,12 @@ select {
 
 .header-submenu-item:hover { 
   background: #83929B;
+  color: #fff;
 }
 
 .header-submenu-item {
-  padding: 9px 88.5px ;
+  padding: 9px 53px ;
+  text-align: center;
 }
 
 .header-submenu:hover {
@@ -312,7 +322,6 @@ select {
   }
 
   .main-advantages {
-    flex-wrap: wrap;
     justify-content: center;
     gap: 21px;
     
@@ -320,9 +329,17 @@ select {
       margin: 0;
     }
 
+    .main-advantages-twenty-age-text img {
+      width: 81px;
+      height: auto;
+    }
+
+    .main-advantages-age-text {
+      font-size: 12px;
+    }
+
     .main-advantages-text-items {
-      flex-wrap: wrap;
-      justify-content: center;
+      gap: 18px;
     }
 
     .main-advantages-text-item {
@@ -330,6 +347,7 @@ select {
       max-width: 100%;
       justify-content: space-between;
       font-size: 15px;
+      line-height: 18px;
 
       img {
         width: 25px;
@@ -341,6 +359,10 @@ select {
   .header-main-banner-title {
     font-size: 35px;
     line-height: 42px;
+  }
+
+  .header-main-banner-dots {
+    padding-right: 16px;
   }
 }
 
@@ -376,10 +398,16 @@ select {
 
   .main-advantages {
     padding-bottom: 22px;
+    flex-wrap: wrap;
   }
 
+  .main-advantages-text-items { 
+    flex-wrap: wrap;
+  }
+
+
   .header-main-banner-dots {
-    padding: 16px;
+    padding-right: 0;
     justify-content: center;
   }
 }
