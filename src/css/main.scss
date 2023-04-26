@@ -227,6 +227,7 @@ select {
 .header-submenu-mobile {
   background: #fff;
   width: 564px;
+  max-width: 100%;
   position: fixed;
   right: 0;
   top: 0;
@@ -409,5 +410,13 @@ select {
   .header-main-banner-dots {
     padding-right: 0;
     justify-content: center;
+  }
+
+  .submenu-items-mobile {
+    padding: 30px 24px;
+  }
+
+  .submenu-main-items-mobile {
+    padding-left: 30px;
   }
 }
